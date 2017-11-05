@@ -18,7 +18,7 @@ In `request-logger.php` config file you'll find current properties:
 |Property|Default|Descirption|
 |-|-|-|
 |storage_path|/logs/request-logger.log|Where your logs gonna be stored|
-|param_exceptions|['password', 'password_confirmation']|which params should be filtered out from requestParamsFormatter|
+|param_exceptions|['password', 'password_confirmation']|which params should be filtered out from RequestParamsFormatter|
 
 ## Usage
 In global middleware:
