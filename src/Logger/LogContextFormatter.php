@@ -44,7 +44,7 @@ class LogContextFormatter implements ContextFormatterContract
     }
 
     /**
-     * @param ContextFormatterContract $contextFormatterContract
+     * @param ContextFormatterContract $newFormatter
      */
     public function addContextFormatter(ContextFormatterContract $newFormatter)
     {
