@@ -17,7 +17,7 @@ class BenchmarkService
     /**
      * @var mixed
      */
-    protected $startTime = LARAVEL_START;
+    protected $startTime;
 
     /**
      * @var
@@ -48,6 +48,10 @@ class BenchmarkService
             $this->stop();
         }
 
+        if (!$this->startTime) {
+            $this->setDefaultStartTime();
+        }
+
         return $this->endTime - $this->startTime;
     }
 
@@ -65,6 +69,19 @@ class BenchmarkService
     public function stop()
     {
         $this->endTime = microtime(true);
+    }
+
+
+    /**
+     * Get StartTime if such exists
+     */
+    protected function setDefaultStartTime()
+    {
+        if (defined('LARAVEL_START')) {
+            $this->startTime = LARAVEL_START;
+        } else {
+            $this->startTime = microtime(true);
+        }
     }
 
 }
