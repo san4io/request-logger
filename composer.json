@@ -5,7 +5,7 @@
     "type": "library",
     "require": {
         "php": ">=7.1",
-        "laravel/framework ": "5.*"
+        "laravel/laravel": "5.*"
     },
     "author": {
         "name": "Aleksandr Golubovskij",
@@ -14,11 +14,7 @@
     "autoload": {
         "psr-4": {
             "San4io\\RequestLogger\\": "src/"
-        },
-        "files": [
-            "src/Illuminate/Foundation/helpers.php",
-            "src/Illuminate/Support/helpers.php"
-        ]
+        }
     },
     "extra": {
         "laravel": {
