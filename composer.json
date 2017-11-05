@@ -6,6 +6,8 @@
     "require": {
         "php": ">=7.1",
         "illuminate/support": "5.*",
+        "illuminate/bus": "5.*",
+        "illuminate/container": "5.*",
         "illuminate/routing": "5.*",
         "illuminate/http": "5.*",
         "illuminate/queue": "5.*",
