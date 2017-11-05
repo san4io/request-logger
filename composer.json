@@ -5,7 +5,18 @@
     "type": "library",
     "require": {
         "php": ">=7.1",
-        "laravel/laravel": "5.5.*"
+        "illuminate/support": "5.*",
+        "illuminate/bus": "5.*",
+        "illuminate/container": "5.*",
+        "illuminate/routing": "5.*",
+        "illuminate/http": "5.*",
+        "illuminate/queue": "5.*",
+        "illuminate/console": "~5.5.0",
+        "illuminate/contracts": "~5.5.0",
+        "illuminate/events": "~5.5.0",
+        "illuminate/filesystem": "~5.5.0",
+        "illuminate/notifications": "~5.5.0",
+        "monolog/monolog": "~1.12"
     },
     "author": {
         "name": "Aleksandr Golubovskij",
@@ -22,6 +33,5 @@
                 "San4io\\RequestLogger\\RequestLoggerServiceProvider"
             ]
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
