@@ -5,7 +5,14 @@
     "type": "library",
     "require": {
         "php": ">=7.1",
-        "laravel/framework ": "5.*"
+        "illuminate/support": "5.*",
+        "illuminate/bus": "5.*",
+        "illuminate/container": "5.*",
+        "illuminate/routing": "5.*",
+        "illuminate/http": "5.*",
+        "illuminate/queue": "5.*",
+        "monolog/monolog": "~1.12",
+        "symfony/http-foundation": "~3.3"
     },
     "author": {
         "name": "Aleksandr Golubovskij",
@@ -14,11 +21,7 @@
     "autoload": {
         "psr-4": {
             "San4io\\RequestLogger\\": "src/"
-        },
-        "files": [
-            "src/Illuminate/Foundation/helpers.php",
-            "src/Illuminate/Support/helpers.php"
-        ]
+        }
     },
     "extra": {
         "laravel": {
