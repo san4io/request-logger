@@ -1,5 +1,5 @@
 # Request Logger
-Package to log Laravel HTTP requests. 
+Package for logging Laravel HTTP requests. 
 By default it uses **Monolog with LogStash** formatter, but it can be overriden in your ServiceProvider, check Advanced Configuration section.
 
 ## Installation
@@ -16,8 +16,8 @@ php artisan vendor:publish --provider="San4io\RequestLogger\RequestLoggerService
 In `request-logger.php` config file you'll find current properties:
 |Property|Default|Descirption|
 |-|-|-|
-|storage_path|`/logs/request-logger.log`|Where your logs gonna be stored|
-|param_exceptions|`['password', 'password_confirmation']`|which params should be filtered out from requestParamsFormatter|
+|storage_path|/logs/request-logger.log|Where your logs gonna be stored|
+|param_exceptions|['password', 'password_confirmation']|which params should be filtered out from requestParamsFormatter|
 
 ## Usage
 In global middleware:
@@ -207,6 +207,6 @@ Any contributions welcome!
    "@tags":[  
       "request-logger"
    ],
-   "@type":"PlaceHub"
+   "@type":"TestApplication"
 }
 ```
