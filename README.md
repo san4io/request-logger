@@ -14,6 +14,7 @@ php artisan vendor:publish --provider="San4io\RequestLogger\RequestLoggerService
 
 ## Configuration
 In `request-logger.php` config file you'll find current properties:
+
 |Property|Default|Descirption|
 |-|-|-|
 |storage_path|/logs/request-logger.log|Where your logs gonna be stored|
