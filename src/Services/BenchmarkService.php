@@ -25,6 +25,11 @@ class BenchmarkService
     protected $endTime;
 
     /**
+     * @var string
+     */
+    protected $name;
+
+    /**
      * TimeService constructor.
      * @param string $name
      */

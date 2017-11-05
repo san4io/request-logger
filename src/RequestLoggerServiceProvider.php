@@ -3,16 +3,15 @@
 namespace San4io\RequestLogger;
 
 use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use Monolog\Formatter\LogstashFormatter;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Logger;
-use San4io\RequestLogger\Logger\ContextFormatters\ResponseBenchmarkFormatter;
 use San4io\RequestLogger\Logger\ContextFormatters\RequestHeadersFormatter;
 use San4io\RequestLogger\Logger\ContextFormatters\RequestMethodFormatter;
 use San4io\RequestLogger\Logger\ContextFormatters\RequestParamsFormatter;
 use San4io\RequestLogger\Logger\ContextFormatters\RequestUriFormatter;
+use San4io\RequestLogger\Logger\ContextFormatters\ResponseBenchmarkFormatter;
 use San4io\RequestLogger\Logger\ContextFormatters\ResponseContentFormatter;
 use San4io\RequestLogger\Logger\LogContextFormatter;
 use San4io\RequestLogger\Logger\RequestLogger;
@@ -25,7 +24,7 @@ class RequestLoggerServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(Router $router)
+    public function boot()
     {
         $this->publishes([
             __DIR__ . '/../../../resources/config/request-logger.php' => config_path('request-logger.php')
@@ -83,7 +82,7 @@ class RequestLoggerServiceProvider extends ServiceProvider
      */
     protected function registerAppBenchmarkFormatter()
     {
-        $this->app->singleton('app.services.benchmark.application', function (Application $app) {
+        $this->app->singleton('app.services.benchmark.application', function () {
             return new BenchmarkService('application');
         });
 
@@ -97,7 +96,7 @@ class RequestLoggerServiceProvider extends ServiceProvider
     /**
      *
      */
-    protected function registerLogContextFormatter(): void
+    protected function registerLogContextFormatter()
     {
         $this->app->bind(LogContextFormatter::class, function (Application $app) {
             $contextFormatter = new LogContextFormatter();
