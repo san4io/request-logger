@@ -11,13 +11,7 @@
         "illuminate/routing": "5.*",
         "illuminate/http": "5.*",
         "illuminate/queue": "5.*",
-        "illuminate/console": "~5.5.0",
-        "illuminate/contracts": "~5.5.0",
-        "illuminate/events": "~5.5.0",
-        "illuminate/filesystem": "~5.5.0",
-        "illuminate/notifications": "~5.5.0",
-        "monolog/monolog": "~1.12",
-        "symfony/http-foundation": "~3.3"
+        "monolog/monolog": "~1.12"
     },
     "author": {
         "name": "Aleksandr Golubovskij",
@@ -26,7 +20,11 @@
     "autoload": {
         "psr-4": {
             "San4io\\RequestLogger\\": "src/"
-        }
+        },
+        "files": [
+            "src/Illuminate/Foundation/helpers.php",
+            "src/Illuminate/Support/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {

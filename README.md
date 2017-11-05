@@ -1,4 +1,8 @@
 # Request Logger
+[![Build Status](https://scrutinizer-ci.com/g/san4io/request-logger/badges/build.png?b=master)](https://scrutinizer-ci.com/g/san4io/request-logger/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/san4io/request-logger/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/san4io/request-logger/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/san4io/request-logger/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/san4io/request-logger/?branch=master)
+
 Package for logging Laravel HTTP requests. 
 By default it uses **Monolog with LogStash** formatter, but it can be overriden in your ServiceProvider, check Advanced Configuration section.
 
