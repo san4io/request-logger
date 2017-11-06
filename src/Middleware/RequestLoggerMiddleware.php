@@ -4,6 +4,7 @@ namespace San4io\RequestLogger\Middleware;
 
 use Closure;
 use San4io\RequestLogger\Jobs\LoggingJob;
+use San4io\RequestLogger\Logger\RequestLogger;
 use San4io\RequestLogger\Services\BenchmarkService;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -50,7 +51,8 @@ class RequestLoggerMiddleware implements TerminableInterface
      */
     protected function saveLog(Request $request, Response $response): void
     {
-        $job = new LoggingJob($request, $response);
-        $job->handle();
+        /** @var RequestLogger $requestLogger */
+        $requestLogger = app(RequestLogger::class);
+        $requestLogger->log($request, $response);
     }
 }
