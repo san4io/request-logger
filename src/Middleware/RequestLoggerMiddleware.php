@@ -3,7 +3,6 @@
 namespace San4io\RequestLogger\Middleware;
 
 use Closure;
-use San4io\RequestLogger\Jobs\LoggingJob;
 use San4io\RequestLogger\Logger\RequestLogger;
 use San4io\RequestLogger\Services\BenchmarkService;
 use Symfony\Component\HttpFoundation\Request;
