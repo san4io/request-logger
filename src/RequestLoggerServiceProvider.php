@@ -8,6 +8,7 @@ use Monolog\Formatter\LogstashFormatter;
 use Monolog\Handler\RotatingFileHandler;
 use Monolog\Logger;
 use San4io\RequestLogger\Logger\ContextFormatters\RequestHeadersFormatter;
+use San4io\RequestLogger\Logger\ContextFormatters\RequestIPFormatter;
 use San4io\RequestLogger\Logger\ContextFormatters\RequestMethodFormatter;
 use San4io\RequestLogger\Logger\ContextFormatters\RequestParamsFormatter;
 use San4io\RequestLogger\Logger\ContextFormatters\RequestUriFormatter;
@@ -101,6 +102,7 @@ class RequestLoggerServiceProvider extends ServiceProvider
         $this->app->bind(LogContextFormatter::class, function (Application $app) {
             $contextFormatter = new LogContextFormatter();
 
+            $contextFormatter->addContextFormatter($app->make(RequestIPFormatter::class));
             $contextFormatter->addContextFormatter($app->make(RequestMethodFormatter::class));
             $contextFormatter->addContextFormatter($app->make(RequestUriFormatter::class));
             $contextFormatter->addContextFormatter($app->make(RequestParamsFormatter::class));

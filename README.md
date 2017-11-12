@@ -53,6 +53,7 @@ Route::get('/', function () {
 ## Default Log Context Formatters
 |Formatter|Name|Descirption|Example|
 |-|-|-|-|
+|RequestIPFormatter|request_ip|Returns request ip information|192.22.22.11|
 |RequestMethodFormatter|request_method|Returns request method information|POST|
 |RequestUriFormatter|request_uri|Returns request uri information|http://localhost/api/v1/authenticate|
 |RequestHeadersFormatter|request_headers|Returns request headers information|{cookie:[Phpstorm-f176c91a=b5df2557-0cd3-44be-857d-7ea59b93c24a; io=Xm-fflHJzYnRSle0AAAB; JSESSIONID.41a4f06a=ux60gwkijzfr1cleylxjci7po;], "origin":["http://localhost"], "accept":["application/json"]}|
@@ -158,7 +159,8 @@ Any contributions welcome!
    "@source":"3b1ceb06851b",
    "@fields":{  
       "channel":"request-logger",
-      "level":200,
+      "level":200,      
+      "request_ip":"192.22.22.11",
       "request_method":"POST",
       "request_uri":"http://localhost/api/v1/authenticate",
       "request_params":{  
