@@ -45,8 +45,8 @@ class RequestLoggerMiddleware implements TerminableInterface
     }
 
     /**
-     * @param Request $request
-     * @param Response $response
+     * @param \Illuminate\Http\Request $request
+     * @param \Illuminate\Http\Response $response
      */
     protected function saveLog(Request $request, Response $response): void
     {
